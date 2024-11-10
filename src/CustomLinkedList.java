@@ -1,5 +1,6 @@
 public class CustomLinkedList <T> {
     private Node<T> head;
+    private int size = 0;
 
     public void add(T item) {
         //adds the item at the end of the list
@@ -14,6 +15,7 @@ public class CustomLinkedList <T> {
             }
             temp.next = node;
         }
+        size++;
     }
 
     public void addBeg(T item) {
@@ -26,6 +28,7 @@ public class CustomLinkedList <T> {
             node.next = head;
             head = node;
         }
+        size++;
     }
 
     public void show() {
@@ -37,6 +40,16 @@ public class CustomLinkedList <T> {
             else System.out.println(temp.data);
             temp = temp.next;
         }
+    }
+
+    public int ListSize(){
+        //returns the length of the linked list
+        return size;
+    }
+    public void clear() {
+        //clears the list
+        head = null;
+        size = 0;
     }
     private static class Node<T> {
         T data;
