@@ -17,6 +17,9 @@ public class LinkedListRunner {
         list.add(2);
         list.add(3);
         list.addBeg(0);
+        list.insertAtIndex(2, 7);
+        list.insertAtIndex(0, -1);
+        list.insertAtIndex(6, 100);
 
         System.out.println("The size of the list is: " + list.ListSize());
 
